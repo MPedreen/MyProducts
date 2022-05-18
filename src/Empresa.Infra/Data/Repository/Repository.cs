@@ -12,12 +12,12 @@ namespace Empresa.Infra.Data.Repository
 {
     public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {
-        protected readonly MeuDbContext Db;
+        protected readonly EmpresaDbContext Db;
         protected readonly DbSet<TEntity> DbSet;
 
         protected Repository()
         {
-            Db = new MeuDbContext();
+            Db = new EmpresaDbContext();
             DbSet = Db.Set<TEntity>();
         }
 
