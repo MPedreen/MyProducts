@@ -1,7 +1,7 @@
 ﻿using Empresa.Business.Models.Produtos;
 using System.Data.Entity.ModelConfiguration;
 
-namespace DevIO.Infra.Data.Mappings
+namespace Empresa.Infra.Data.Mappings
 {
     public class ProdutoConfig : EntityTypeConfiguration<Produto>
     {
