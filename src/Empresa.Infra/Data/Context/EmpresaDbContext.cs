@@ -9,7 +9,10 @@ namespace Empresa.Infra.Data.Context
     public class EmpresaDbContext : DbContext
     {
         public EmpresaDbContext() : base("DefaultConnection")
-        { }
+        {
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
+        }
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
