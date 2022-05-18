@@ -26,16 +26,13 @@ namespace Empresa.Infra.Data.Mappings
                 .HasMaxLength(250);
 
             Property(c => c.Bairro)
-                .IsRequired()
-                .HasMaxLength(100);
+                .IsRequired();
 
             Property(c => c.Cidade)
-                .IsRequired()
-                .HasMaxLength(100);
+                .IsRequired();
 
             Property(c => c.Estado)
-                .IsRequired()
-                .HasMaxLength(100);
+                .IsRequired();
 
             ToTable("Enderecos");
         }

@@ -21,9 +21,16 @@ namespace Empresa.Infra.Data.Context
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
+            modelBuilder.Properties<string>()
+                .Configure(p => p
+                .HasColumnType("varchar")
+                .HasMaxLength(100));
+
             modelBuilder.Configurations.Add(new FornecedorConfig());
             modelBuilder.Configurations.Add(new EnderecoConfig());
             modelBuilder.Configurations.Add(new ProdutoConfig());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
