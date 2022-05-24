@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Empresa.Business.Core.Validations.Documentos;
+using FluentValidation;
 
 namespace Empresa.Business.Models.Fornecedores.Validations
 {
